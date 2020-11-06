@@ -1,0 +1,220 @@
+/* contents2 */
+body#launcher {
+  background: none;
+}
+
+.launcher_wrap {
+  width: 445px;
+  height: 152px;
+}
+.launcher_wrap h3 {
+  color: #000;
+  font-weight: bold;
+  padding-bottom: 7px;
+  padding-left: 16px;
+  float: left;
+  font-size: 13px;
+  padding-top: 8px;
+}
+.launcher_wrap h5 {
+  font-size: 13px;
+  float: right;
+  color: #333;
+  padding: 0px 4px;
+  position: relative;
+  top: 7px;
+  margin-right: 10px;
+  font-weight: normal;
+}
+.launcher_wrap h5 a {
+  font-weight: bold;
+  color: #333;
+}
+.launcher_wrap h5 a:hover {
+  color: #a93800;
+}
+
+
+
+.contents_launcher section {
+  float: left;
+}
+
+.contents_launcher table td {
+  text-align: center;
+  padding: 3px 0;
+  font-size: 14px;
+  color: #c2c2c2;
+}
+.contents_launcher table td.set_width {
+  border: 0;
+  display: block;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  position: absolute\9;
+  /* IE8 IE9 */
+  *position: static;
+  /* IE8 IE9 */
+  *word-break: keep-all;
+  /* IE6 IE7 */
+}
+.contents_launcher table td.text_left {
+  width: 275px;
+}
+.contents_launcher table td:last-child {
+  color: #919191;
+}
+
+.contents_launcher table {
+  display: block;
+  width: 430px;
+  margin: 0 auto;
+}
+.contents_launcher table tr:first-child td	{ padding-top: 11px; }
+
+.contents_launcher table td.text_left {
+  text-align: left;
+}
+
+.contents_launcher table td a {
+  font-size: 14px;
+  color: #c2c2c2;
+}
+.contents_launcher table td a:hover {
+  color: #e3c64a;
+}
+
+.contents_launcher table td .icon {
+  display: inline-block;
+  width: 48px;
+  height: 17px;
+  border: 1px solid #262626;
+  -webkit-border-radius: 9px;
+  -moz-border-radius: 9px;
+  border-radius: 9px;
+  background-color: #000;
+  font-size: 12px;
+  color: #aaa;
+  text-align: center;
+  line-height: 17px;
+}
+
+.contents_launcher .news {
+  overflow: hidden;
+  position: relative;
+  width: 514px;
+  height: 326px;
+  margin-right: 16px;
+  padding: 33px 0 0 30px;
+}
+
+.contents_launcher .news .btn_more {
+  overflow: hidden;
+  position: absolute;
+  top: 33px;
+  right: 30px;
+  width: 40px;
+  height: 40px;
+  background: url("../images/btn_main_more.html") no-repeat 0 0;
+  font-size: 0;
+  text-indent: -9999px;
+}
+
+.contents_launcher .news .btn_more:hover {
+  background: url("../images/btn_main_more_on.html") no-repeat 0 0;
+}
+
+.contents_launcher .ranking .btn_more {
+  overflow: hidden;
+  position: absolute;
+  top: 33px;
+  right: 30px;
+  width: 40px;
+  height: 40px;
+  background: url("../images/btn_main_more.html") no-repeat 0 0;
+  font-size: 0;
+  text-indent: -9999px;
+}
+
+.contents_launcher .ranking .btn_more:hover {
+  background: url("../images/btn_main_more_on.html") no-repeat 0 0;
+}
+
+.contents_launcher .ranking {
+  overflow: hidden;
+  position: relative;
+  width: 505px;
+  height: 326px;
+  padding: 33px 0 0 35px;
+}
+
+.contents_launcher .ranking h2 {
+  padding: 4px 0 24px 9px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #b4b4b4;
+}
+
+.contents_launcher .ranking .tab_menu {
+  position: absolute;
+  top: 33px;
+  right: 71px;
+}
+
+.contents_launcher .ranking .tab_menu li a {
+  width: 150px;
+}
+
+.contents_launcher .ranking .ranking_list li {
+  overflow: hidden;
+  position: relative;
+  width: 472px;
+  height: 45px;
+  margin-bottom: 12px;
+}
+
+.contents_launcher .ranking .ranking_list li span {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.contents_launcher .ranking .ranking_list li .icon_ranking {
+  width: 89px;
+  margin-right: 40px;
+  text-align: center;
+}
+
+.contents_launcher .ranking .ranking_list li .name {
+  padding-top: 11px;
+  font-size: 18px;
+  color: #c2c2c2;
+  line-height: 21px;
+}
+
+.contents_launcher .ranking .ranking_list li .point {
+  position: absolute;
+  top: 13px;
+  right: 0;
+  font-size: 14px;
+  color: #c2c2c2;
+}
+
+.contents_launcher .ranking .ranking_list li.last .icon_ranking {
+  padding-top: 4px;
+}
+
+.contents_launcher .ranking .ranking_list li:first-child {
+  height: 69px;
+}
+
+.contents_launcher .ranking .ranking_list li:first-child .name {
+  padding-top: 27px;
+  font-size: 22px;
+  color: #fff;
+  line-height: 21px;
+}
+
+.contents_launcher .ranking .ranking_list li:first-child .point {
+  top: 29px;
+}
