@@ -6,8 +6,12 @@ Info:
 Extract the file cGFuZWxhZG1pbg==
 
 Edit the database connection in the files:
+
+
 include.php
+
 _includes/rankp.php
+
 class/Ranking.class.php
 
 Creditos = CASTROMS
