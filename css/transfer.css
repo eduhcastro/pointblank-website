@@ -1,0 +1,680 @@
+@charset "utf-8";
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,500,700|Teko:400,500,600,700");
+
+*, *:before, *:after {-webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;}
+
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, 
+b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, input, select, textarea, button, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, header, footer, hgroup, menu, nav, output, 
+ruby, section, summary, time, mark, audio, video {margin: 0; padding: 0; vertical-align: baseline; border: 0;}
+
+/* HTML5 */
+article, aside, hgroup, header, footer, figure, figcaption, nav, section,time, mark, canvas, video, audio, details, summary {display: block;}
+
+h1, h2, h3, h4 {font-weight: 600; font-style: italic; text-transform: uppercase; font-family: 'Teko';}
+h5 {font-size: 1.1rem; color: #d00; letter-spacing: 0; font-weight: 500; text-transform: uppercase;}
+ol, ul {font-size: 0; letter-spacing: -0.4rem;}
+li {font-size: 1.4rem; letter-spacing: 0; list-style: none; list-style-image: none; vertical-align: top;}
+img {line-height: inherit; vertical-align: top;}
+a {text-decoration: none;}
+a:hover {transition: all 0.6s ease-out;}
+table {border-collapse: collapse; border-spacing: 0; table-layout: fixed;}
+table caption {display: none;}
+
+html {width: 100%; min-width: 18rem; font-size: 62.5%; overflow-x: auto;}
+body {width: 100%; color: #000; line-height: 1; font-weight: 400; font-family: 'Roboto', sans-serif; background: #000; /* IOS */ -webkit-text-size-adjust: none; overflow-x: hidden;}
+
+/* LAYOUT */
+header {width: 100%; padding: 3.6rem; font-size: 0; letter-spacing: -0.4rem; text-align: right; position: absolute; top: 0; z-index: 20;}
+header .social {position: absolute; top: 3rem; left: 3rem;}
+header .social > a {width: 6rem; height: 6rem; margin-left: 0.6rem; background-position: left top; display: inline-block;}
+header .social > a:hover {background-position: left -6rem; transition: none;}
+header .social > a:first-child {margin-left: 0;}
+header .social .sns_discord {background: url(/images/event/2019/06_transfer/sns_discord.png) no-repeat;}
+header .social .sns_facebook {background: url(/images/event/2019/06_transfer/sns_facebook.png) no-repeat;}
+header .social .sns_youtube {background: url(/images/event/2019/06_transfer/sns_youtube.png) no-repeat;}
+header .social .sns_instagram {background: url(/images/event/2019/06_transfer/sns_instagram.png) no-repeat;}
+header .utilbtn {width: 100%;}
+header .utilbtn > button {width: 12rem; height: 4.8rem; font-size: 1.8rem; letter-spacing: 0.08rem; line-height: 5.2rem; border-radius: 0.4rem;}
+header .utilbtn > button:hover {background-color: #000;}
+header .utilbtn > button:first-child {margin-right: 1.2rem;}
+header .utilbtn .btn_signup {color: #aaa; border: 1px solid #555; background: url(/images/event/2019/06_transfer/btn_line_gyl.png) no-repeat left 50%, url(/images/event/2019/06_transfer/btn_line_gyr.png) no-repeat right 50%; background-color: rgba(51, 51, 51, 0.7);}
+header .utilbtn .btn_signup:hover {color: #fff;}
+header .utilbtn .btn_login {color: #fff; border: 1px solid #d00; background: url(/images/event/2019/06_transfer/btn_line_rdl.png) no-repeat left 50%, url(/images/event/2019/06_transfer/btn_line_rdr.png) no-repeat right 50%; background-color: rgba(221, 0, 0, 0.6);}
+header .utilbtn .btn_login:hover {color: #fd0;}
+
+footer {width: 100%; padding: 6rem 0 14rem; font-size: 1.1rem; color: #777; text-align: center; background: #000; position: relative; z-index: 9;}
+footer .cs {margin: 2rem 0 0.6rem; font-size: 1.4rem; color: #e22; letter-spacing: 0.02rem;}
+footer .cs > a {color: #e22; text-transform: none; text-decoration: underline;}
+footer .cs > a:hover {color: #fd0;}
+footer .copy {font-weight: 600; text-transform: uppercase;}
+
+/* FORM */
+.explain {padding: 2.4rem; font-size: 1.4rem; line-height: 2.4rem; border: 1px solid #ddd; border-radius: 0.4rem; background: #f2f2f2;}
+
+.entry > h5 {margin: 3rem 0 0.8rem; color: #fff; letter-spacing: 0.02rem;}
+.entry > h5:first-child {margin-top: 0;}
+.entry .with_btn {font-size: 0; letter-spacing: -0.4rem; position: relative;}
+.entry .with_btn > input {width: 100%; padding-right: 14.4rem;}
+.entry .with_btn > button {width: 12rem; height: 5.8rem; font-size: 1.8rem; line-height: 6rem; letter-spacing: 0.06rem; font-weight: 500; border: 1px solid #d00; border-radius: 0; background: #b00; position: absolute; top: 0; right: 0;}
+.entry .with_btn > button:hover {border: 1px solid #f60; background-color: #d00; background: linear-gradient(to right, rgba(255,85,0,1), rgba(255,0,0,1)); transition: none;}
+.entry .wrong {margin-top: 1rem; padding: 1.6rem 2.4rem 1.6rem 4.8rem; font-size: 1.2rem; color: #fd0; line-height: 1.8rem; letter-spacing: 0.02rem; border: 1px solid #a00; border-radius: 0.3rem; background: #800 url(/images/event/2019/06_transfer/icon_16_warn.png) no-repeat 2.4rem 50%;}
+.entry .check {margin-top: 2rem; padding: 0; font-size: 1.2rem; color: #aaa; line-height: 2.4rem; letter-spacing: -0.01rem;}
+.entry .check a {color: #aaa; text-decoration: underline;}
+.entry .check a:hover {color: #fd0;}
+
+.capcha {width: 100%; margin-top: 3.6rem;}
+.capcha > div {width: 302px; height: 7.6rem; margin: 0 auto;}
+
+.loding {width: 100%; height: 100%; position: fixed; left: 0; top: 0; display: none; z-index: 100;}
+.loding > img {width: 6rem; height: 6rem; margin: -3rem 0 0 -3rem; position: absolute; left: 50%; top: 50%;}
+
+/* INPUT */
+input, select, textarea, button {font-size: 1.4rem; letter-spacing: 0; font-family: 'Roboto'; display: inline-block; vertical-align: middle;}
+input:focus, select:focus, textarea:focus, button:focus {outline: none;}
+
+input[type="checkbox"] {width: 1.6rem; height: 1.6rem; margin: -0.1rem 0.6rem 0 0; padding: 0; border: none;}
+input[type="radio"] {width: 1.6rem; height: 1.6rem; margin-right: 0.6rem; padding: 0; border: none;}
+
+input {width: 100%; height: 5.8rem; padding: 2rem 2.4rem; color: #fff; line-height: 5.8rem; border: 1px solid #700; background: #400;}
+input:focus {border: 1px solid #d00; background: #000;}
+input:disabled {color: #fff; background: #400;}
+input.placeholder {color: #c88;}
+input:-ms-input-placeholder {color: #c88;}
+input::-webkit-input-placeholder {color: #c88;}
+input::-moz-placeholder {color:#c88;}
+input::placeholder {color: #c88; opacity: 1;}
+
+input.pass {padding-right: 7.2rem; background: #400 url(/images/event/2019/06_transfer/bul_pass.png) no-repeat right 50%;}
+input.pass:focus {background: #000 url(/images/event/2019/06_transfer/bul_pass.png) no-repeat right 50%;}
+input.miss {padding-right: 7.2rem; background: #400 url(/images/event/2019/06_transfer/bul_miss.png) no-repeat right 50%;}
+input.miss:focus {background: #000 url(/images/event/2019/06_transfer/bul_miss.png) no-repeat right 50%;}
+
+button {color: #fff; font-weight: 600; font-style: italic; text-transform: uppercase; font-family: 'Teko'; border-bottom: 1px solid rgba(0, 0, 0, 0.1); border-radius: 0.3rem; background: #d00;}
+button:hover {cursor: pointer; transition: all 0.6s ease-out;}
+button:hover > font {transition: all 0.6s ease-out;}
+button:focus {outline: none;}
+
+.btn48 {min-width: 12rem; height: 4.8rem; padding: 0.1rem 2.4rem 0; font-size: 1.8rem; line-height: 5rem; letter-spacing: 0.1rem;}
+.btn60 {min-width: 14.4rem; height: 6rem; padding: 0.1rem 2.4rem 0; font-size: 2.2rem; line-height: 6.2rem; letter-spacing: 0.1rem;}
+.btn84 {min-width: 30rem; height: 8.2rem; padding: 0.1rem 2.4rem 0; font-size: 2.8rem; line-height: 8.6rem; letter-spacing: 0.16rem;}
+
+.btnrd {border: none; background-color: #d00; background: linear-gradient(to right, rgba(255,85,0,1), rgba(255,0,0,1));}
+.btnrd:hover {text-shadow: 0.1rem 0.1rem 0 rgba(221,0,0,0.1); background: #f60;}
+.btngy {color: #eee; border: none; background-color: #888; background: linear-gradient(to right, rgba(136,136,136,1), rgba(136,136,136,1));}
+.btngy:hover {color: #fff; background: #999;}
+
+.btn {font-size: 0; text-align: center;}
+.btn > li {margin: 0 1.2rem; border-radius: 0.3rem; display: inline-block;}
+.btn > li.btnrd {border: 1px solid #f50;}
+.btn > li.btnrd:hover {border: 1px solid #f80;}
+.btn > li.btngy {border: 1px solid #999;}
+.btn > li.btngy:hover {border: 1px solid #bbb;}
+.btn > li > button {width: 100%;}
+
+/* SHARE ON FACEBOOK */
+.sharefb_m {width: 100%; border-bottom: 2px solid #fe0; display: none;}
+.sharefb_m .btn_share {width: 100%; height: 12rem; font-size: 0; text-indent: -99999px; border: none; border-radius: 0; background: #0b1f46 url(/images/event/2019/06_transfer/share_fb_m.png) no-repeat 50% bottom; background-size: contain; box-shadow: none; transition: none;}
+
+/* TRANSFER */
+.transfer {padding: 14.4rem 0 13.2rem; text-align: center; background: url(/images/event/2019/06_transfer/transfer_bg.jpg) no-repeat 50% top; position: relative; z-index: 1;}
+.transfer > h1 {margin-bottom: 6rem;}
+
+.transfer .contents {width: 100%;}
+.transfer .contents .cont {max-width: 144rem; margin: 0 auto; padding: 0 2.4rem; position: relative; z-index: 3;}
+
+.transfer .visual {width: 100%; padding-bottom: 7.2rem;}
+.transfer .visual .txt {width: 80%; margin: 0 auto; font-size: 1.7rem; line-height: 2.6rem; color: #fff;}
+.transfer .visual .btn {margin-top: 4rem;}
+.transfer .visual .btn > button {padding: 1.6rem 2.6rem 1.2rem 2.4rem; font-size: 1.8rem; line-height: 2.2rem; letter-spacing: 0.04rem;}
+.transfer .visual .btn > a {height: 5.2rem; padding: 1.4rem 2.8rem 1rem 2.4rem; font-size: 1.8rem; color: #fff; line-height: 2.2rem; letter-spacing: 0.04rem; font-weight: 600; font-style: italic; text-transform: uppercase; font-family: 'Teko'; border-bottom: 1px solid rgba(0, 0, 0, 0.1); border-radius: 0.3rem; background: #d00; position: relative; top: 0.6rem;}
+.transfer .visual .btn .btn_howto {margin-right: 1.2rem; color: #f00; border: 1px solid #f00; background: url(/images/event/2019/06_transfer/btn_clamp_rdtl.png) no-repeat left top, url(/images/event/2019/06_transfer/btn_clamp_rdbr.png) no-repeat right bottom; background-color: #000;}
+.transfer .visual .btn .btn_howto > font {color: #999;}
+.transfer .visual .btn .btn_howto:hover {color: #fd0; background-color: #600;}
+.transfer .visual .btn .btn_howto:hover > font {color: #fff;}
+.transfer .visual .btn .btn_share {color: #fff; border: 1px solid #4c7de0; background: url(/images/event/2019/06_transfer/btn_clamp_fbtl.png) no-repeat left top, url(/images/event/2019/06_transfer/btn_clamp_fbbr.png) no-repeat right bottom; background-color: #041230; position: relative;}
+.transfer .visual .btn .btn_share > strong {font-size: 1.8rem; color: #4c7de0; line-height: 2.2rem; letter-spacing: 0.04rem; font-weight: 600; font-style: italic; text-transform: uppercase; font-family: 'Teko';}
+.transfer .visual .btn .btn_share > img {width: 2.2rem; margin-right: 0.6rem; position: relative; top: 0.9rem;}
+.transfer .visual .btn .btn_share:hover {color: #fff; background-color: #0c214c;}
+.transfer .visual .btn .btn_share:hover > font {color: #4c7de0;}
+.transfer .visual .btn .btn_share .noti {height: 2rem; padding: 0 1.2rem; font-size: 1.1rem; color: #000; line-height: 2rem; font-weight: 500; letter-spacing: 0; font-weight: 400; font-family: 'Roboto', sans-serif; font-style: normal; text-transform: none; border: 1px solid #ff0; border-radius: 1rem; background: #fe0; display: inline-block; position: absolute; top: -1.2rem; right: 1.2rem; z-index: 31;}
+.transfer .visual .btn .btn_share .noti > font {color: #c00;}
+.transfer .visual .btn .btn_share .tooltip {width: 35.4rem; height: 21.4rem; margin-left: -17.7rem; letter-spacing: 0; font-weight: 400; font-family: 'Roboto', sans-serif; font-style: normal; text-transform: none; background: url(/images/event/2019/06_transfer/share_fb_bg.png) no-repeat 50% top; position: absolute; top: -21.6rem; left: 50%; z-index: 32; visibility: hidden;}
+.transfer .visual .btn .btn_share .tooltip > font {width: 30rem; height: 15.1rem; margin: 2.4rem auto 0; padding: 2.4rem 1.8rem; font-size: 1.4rem; color: #fff; line-height: 2rem; text-shadow: 0 -0.1rem 0 rgba(0,0,0,0.5); border: 1px solid #002163; border-radius: 0.4rem; background: #22417f; display: block;}
+.transfer .visual .btn .btn_share .tooltip > font > strong {margin-bottom: 0.4rem; color: #fe0; font-weight: 400; display: block;}
+.transfer .visual .btn .btn_share:hover .tooltip {visibility: visible;}
+.transfer .visual_img {width: 100%; position: absolute; top: 0; left: 0; z-index: 2;}
+.transfer .visual_img > p {width: 100%; max-width: 144rem; margin: 19.4rem auto 0; position: relative;}
+.transfer .visual_img .img_left {position: absolute; top: 0; left: -24rem;}
+.transfer .visual_img .img_right {position: absolute; top: 0; right: -24rem;}
+
+.transfer .transfer_step {width: 100%; position: relative; z-index: 3;}
+.transfer .transfer_step li {width: 33.3%; padding: 0.6rem 1.8rem; display: inline-block;}
+.transfer .transfer_step li:first-child {width: 33.4%;}
+.transfer .transfer_step li > div {width: 100%; border: 1px solid #d22; background: #500 url(/images/event/2019/06_transfer/step_bg.jpg) no-repeat 50%; display: table;}
+.transfer .transfer_step .frame {width: 100%; height: 28.8rem; padding: 0 7.2rem; background: url(/images/event/2019/06_transfer/step_lt.png) no-repeat left top, url(/images/event/2019/06_transfer/step_rb.png) no-repeat right bottom; display: table-cell; vertical-align: middle;}
+.transfer .transfer_step .frame h2 {font-size: 2.8rem; color: #f33; letter-spacing: 0.04rem;}
+.transfer .transfer_step .frame h2 > font {color: #fe0;}
+.transfer .transfer_step .frame .bul {width: 2.4rem; heignt: 0.6rem; margin: 0.4rem auto 0; background: url(/images/event/2019/06_transfer/step_bul.png) repeat-x left 50%; display: block;}
+.transfer .transfer_step .frame .txt {margin-top: 2rem; font-size: 1.6rem; color: #fff; line-height: 2.2rem;}
+.transfer .transfer_step .frame button {min-width: 15.6rem; height: 4.8rem; margin-top: 3rem; padding: 0 2.4rem; font-size: 1.8rem; color: #f99; line-height: 5.1rem; letter-spacing: 0.06rem; border-radius: 0.4rem; border: 1px solid #e00; background: url(/images/event/2019/06_transfer/btn_line_rdl.png) no-repeat left 50%, url(/images/event/2019/06_transfer/btn_line_rdr.png) no-repeat right 50%; background-color: #800;}
+.transfer .transfer_step .frame button:hover {color: #e00; background-color: #000;}
+.transfer .transfer_step .frame button:first-child {margin-right: 1.2rem;}
+.transfer .transfer_step .step2 .bul {width: 4.8rem;}
+.transfer .transfer_step .step3 .bul {width: 7.2rem;}
+
+.transfer .transfer_step .on {padding: 0.6rem 1.8rem; background: url(/images/event/2019/06_transfer/step_clamp_tl.png) no-repeat left top, url(/images/event/2019/06_transfer/step_clamp_tr.png) no-repeat right top, url(/images/event/2019/06_transfer/step_clamp_bl.png) no-repeat left bottom, url(/images/event/2019/06_transfer/step_clamp_br.png) no-repeat right bottom; position: relative;}
+.transfer .transfer_step .on > div {padding: 0.4rem; border: 2px solid #fd0; background: #926800 url(/images/event/2019/06_transfer/step_on_bg.jpg) no-repeat 50%;}
+.transfer .transfer_step .on .frame {height: 27.8rem; border: 1px solid #fd0; background: url(/images/event/2019/06_transfer/step_line_yll.png) no-repeat left 50%, url(/images/event/2019/06_transfer/step_line_ylr.png) no-repeat right 50%;}
+.transfer .transfer_step .on .frame h2 {font-size: 1.8rem; color: #fe0; letter-spacing: 0.04rem;}
+.transfer .transfer_step .on .frame .arrow {width: 2rem; height: 3.8rem; margin-top: -1.9rem; background: url(/images/event/2019/06_transfer/step_arrow.png) no-repeat 50%; position: absolute; top: 50%; right: 0;}
+.transfer .transfer_step .on .frame .txt {min-height: 5.2rem; margin-top: 1.2rem; font-size: 2.8rem; color: #fff; line-height: 2.6rem; letter-spacing: 0.04rem; font-weight: 600; font-style: italic; text-transform: uppercase; font-family: 'Teko'; text-shadow: 0 0.1rem 0 rgba(0,0,0,0.2);}
+.transfer .transfer_step .on .frame .info {margin-top: 1.2rem; font-size: 1.9rem; letter-spacing: -0.02rem; font-weight: 500; text-shadow: 0 0.1rem 0 rgba(255,255,255,0.2);}
+.transfer .transfer_step .on .frame .disabled {min-width: 15.6rem; height: 4.8rem; margin-top: 3rem; padding: 0 2.4rem; font-size: 1.8rem; color: #fd0; line-height: 5.1rem; letter-spacing: 0.06rem; font-weight: 600; font-style: italic; text-transform: uppercase; font-family: 'Teko'; border: 1px solid #fd0; border-radius: 0.4rem; background: rgba(136, 102, 0, 0.7); display: inline-block;}
+.transfer .transfer_step .on .frame button {color: #000; letter-spacing: 0.04rem; border: 1px solid #fe0; background-color: #fc0; background-image: none; background: linear-gradient(to right, rgba(255,234,0,1), rgba(255,204,0,1));}
+.transfer .transfer_step .on .frame button:hover {color: #fe0; background: #000;}
+.transfer .transfer_step .on .frame button > font {color: #d00;}
+
+/* GRENA */
+.garena {max-width: 96rem; margin: 9rem auto 0; padding: 2.4rem; color: #fff; line-height: 2.4rem; text-align: center; border: 1px solid #c00; border-bottom: none; background-color: rgba(136, 0, 0, 0.7);}
+.garena .info {padding: 4.8rem 3.6rem; background: url(/images/event/2019/06_transfer/btn_clamp_rdtl.png) no-repeat left top, url(/images/event/2019/06_transfer/btn_clamp_rdtr.png) no-repeat right top, url(/images/event/2019/06_transfer/btn_clamp_rdbr.png) no-repeat right bottom, url(/images/event/2019/06_transfer/btn_clamp_rdbl.png) no-repeat left bottom;}
+.garena .info > h3 {padding-bottom: 0.6rem; font-size: 2.8rem; line-height: 3rem;}
+.garena .info > h3 > font {color: #fd0; text-transform: none;}
+.garena .info .txt {margin-bottom: 3.6rem; font-size: 1.6rem; color: #faa;}
+.garena .info .txt > font {text-decoration: underline;}
+.garena .cont_btn .btn84 {min-width: 24rem;}
+
+/* BETATEST */
+.betatest {position: fixed; right: 1.2rem; bottom: 1.8rem; z-index: 80;}
+.betatest > a {width: 18.4rem; height: 16rem; background: url(/images/event/2019/06_transfer/betatest.png) no-repeat 50% top; display: inline-block;}
+.betatest > a > img {-webkit-animation-name: fadeIn; animation-name: fadeIn; -webkit-animation-duration: 0.8s; -webkit-animation-iteration-count: infinite; animation-duration: 0.8s; animation-iteration-count: infinite;}
+
+@-webkit-keyframes fadeIn {0% {opacity: 0.2;} 50% {opacity: 1;} 100% {opacity: 0.2;}}
+@keyframes fadeIn {0% {opacity: 0.2;} 50% {opacity: 1;} 100% {opacity: 0.2;}}
+
+/* EVENT */
+.event {width: 100%; text-align: center; border-top: 2px solid #09f; border-bottom: 2px solid #09f; background: url(/images/event/2019/06_transfer/event_bg.jpg) no-repeat 50% top; overflow: hidden; position: relative; z-index: 4;}
+.event .cont {max-width: 144rem; margin: 0 auto; padding: 6.6rem 2.4rem; background: url(/images/event/2019/06_transfer/event_top.png) no-repeat 50% top, url(/images/event/2019/06_transfer/event_bot.png) no-repeat 50% bottom; position: relative;}
+.event .event_cont {position: relative; z-index: 6;}
+.event .event_cont > h2 {font-size: 5rem; line-height: 4.6rem; color: #fff;}
+.event .event_cont > h2 > font {color: #fe9;}
+.event .event_cont > h3 {margin-top: 1.2rem; font-size: 3rem; color: #fff; line-height: 2.6rem; letter-spacing: 0.04rem; text-transform: none;}
+.event .event_cont > h3 > font {color: #9df;}
+.event .event_cont .event_txt {margin-top: 1.2rem; font-size: 1.6rem; color: #fff; line-height: 2.4rem;}
+.event .event_cont .event_txt > font {color: #9df;}
+.event .event_cont .btn_event {min-width: 15.6rem; height: 4.8rem; margin-top: 2.4rem; padding: 0 2.4rem; font-size: 1.8rem; color: #09f; line-height: 5.1rem; letter-spacing: 0.06rem; border: 1px solid #09f; border-radius: 0.4rem; background: url(/images/event/2019/06_transfer/btn_line_bll.png) no-repeat left 50%, url(/images/event/2019/06_transfer/btn_line_blr.png) no-repeat right 50%; background-color: #035;}
+.event .event_cont .btn_event:hover {color: #09f; background-color: #000;}
+.event .cont > img {position: absolute; z-index: 5;}
+.event .cont .img_left {top: -0.2rem; left: -13.2rem;}
+.event .cont .img_right {top: 4rem; right: 2rem;}
+
+.event .banner {width: 12rem; height: 30rem; margin-top: -15rem; position: fixed; top: 50%; right: 3.6rem; z-index: 30;}
+
+.event_banner {padding: 0 2.4rem; text-align: center; position: relative; z-index: 4;}
+.event_banner .cont {max-width: 96rem; margin: 0 auto; padding: 4.2rem 2.4rem 3.8rem; border: 1px solid #09f; background: url(/images/event/2019/06_transfer/event_bg.jpg) no-repeat 50% top; overflow: hidden; position: relative;}
+.event_banner .event_cont {position: relative; z-index: 6;}
+.event_banner .event_cont > h2 {font-size: 3.6rem; line-height: 3rem; color: #fff;}
+.event_banner .event_cont > h2 > font {color: #fe9;}
+.event_banner .event_cont > h3 {margin-top: 0.8rem; font-size: 1.6rem; color: #fff; line-height: 2rem; letter-spacing: 0; font-weight: 400; text-transform: none; font-style: normal; font-family: 'Roboto', sans-serif;}
+.event_banner .event_cont > h3 > font {color: #9df;}
+.event_banner .event_cont .event_txt {margin-top: 1.2rem; font-size: 1.6rem; color: #fff; line-height: 2.4rem;}
+.event_banner .event_cont .event_txt > font {color: #9df;}
+.event_banner .event_cont .btn_event {min-width: 15.6rem; height: 4.8rem; margin-top: 2rem; padding: 0 2.4rem; font-size: 1.8rem; color: #09f; line-height: 5.1rem; letter-spacing: 0.06rem; border: 1px solid #09f; border-radius: 0.4rem; background: url(/images/event/2019/06_transfer/btn_line_bll.png) no-repeat left 50%, url(/images/event/2019/06_transfer/btn_line_blr.png) no-repeat right 50%; background-color: #035;}
+.event_banner .event_cont .btn_event:hover {color: #09f; background-color: #000;}
+.event_banner .cont > img {position: absolute; z-index: 5;}
+.event_banner .cont .img_left {width: 30rem; top: 4rem; left: -10rem;}
+.event_banner .cont .img_right {width: 20rem; top: 4rem; right: -1rem;}
+
+/* DOWNLOAD */
+.download {width: 100%; padding: 1.2rem 1.2rem 1.1rem; border-top: 1px solid #000; background: url(/images/event/2019/06_transfer/fix_down_bg.png) repeat; box-shadow: inset 0 0.1rem 0 rgba(255,255,255,0.2); position: fixed; bottom: 0; z-index: 40;}
+.download > ul {width: 100%; max-width: 138rem; margin: 0 auto;}
+.download > ul > li {width: 100%; padding: 0 1.2rem; display: inline-block;}
+.download > ul > li > p {width: 100%; border: 1px solid #fd0; border-radius: 0.4rem; background: #151515; box-shadow: inset 0 0 0 0.1rem rgba(0,0,0,1); overflow: hidden;}
+.download button {width: 100%; padding: 2.1rem 2.4rem 1.7rem; font-size: 2rem; color: #fff; line-height: 2rem; text-shadow: 0 -0.1rem 0 rgba(0,0,0,1); border: none; border-radius: 0; background: #000 url(/images/event/2019/06_transfer/btn_down.png) no-repeat left 50%; box-shadow: none; transition: none;}
+.download button > font {color: #fd0;}
+.download button:hover {background: #210 url(/images/event/2019/06_transfer/btn_down.png) no-repeat left 50%;}
+.download button:hover > font {color: #fd0;}
+
+/* SUPPORT */
+.support {width: 100%; padding: 14.4rem 2.4rem 12rem; text-align: center; background: #400 url(/images/signup_bg.jpg) no-repeat 50% top;}
+.support .cont {max-width: 135.6rem; margin: 0 auto;}
+
+.support .tab {width: 100%; margin-bottom: 6rem; display: table;}
+.support .tab > li {width: 50%; padding-left: 0.6rem; display: table-cell; vertical-align: middle;}
+.support .tab > li:first-child {padding-left: 0; padding-right: 0.6rem;}
+.support .tab > li > a {width: 100%; height: 7.2rem; font-size: 2.8rem; color: #f00; line-height: 7.6rem; letter-spacing: 0.08rem; font-weight: 600; font-style: italic; text-transform: uppercase; font-family: 'Teko'; border: 1px solid #d00; background: url(/images/event/2019/06_transfer/btn_clamp_rdtl.png) no-repeat left top, url(/images/event/2019/06_transfer/btn_clamp_rdbr.png) no-repeat right bottom; background-color: #400; display: block;}
+.support .tab > li > a:hover {color: #f00; border-color: #f00; background-color: #000;}
+.support .tab > li > a > font {padding: 0 0.2rem 0 0.3rem; font-weight: 400;}
+.support .tab .tab_on > a {color: #fff; border-color: #f00; background: url(/images/event/2019/06_transfer/btn_line_rdl.png) no-repeat left 50%, url(/images/event/2019/06_transfer/btn_line_rdr.png) no-repeat right 50%; background-color: #800;}
+.support .tab .tab_on > a:hover {color: #fff; background: url(/images/event/2019/06_transfer/btn_line_rdl.png) no-repeat left 50%, url(/images/event/2019/06_transfer/btn_line_rdr.png) no-repeat right 50%; background-color: #800; cursor: auto;}
+.support .faq_list {width: 100%;}
+.support .faq_list li {margin-top: 0.6rem; font-size: 1.6rem; line-height: 2.4rem; text-align: left; position: relative;}
+.support .faq_list li:first-child {margin-top: 0;}
+.support .faq_list .quest {width: 100%; color: #fff; background: #500; display: table;}
+.support .faq_list .quest:hover {color: #fe0; transition: none;}
+.support .faq_list .quest > p {padding: 1.8rem 2.4rem 1.6rem; border: 1px solid #900; border-left: none; display: table-cell; vertical-align: middle;}
+.support .faq_list .quest > p:first-child {width: 6rem; padding: 1.8rem 0 1.6rem; color: #f99; text-align: center; border: 1px solid #c00; border-raidus: 0.2rem; background: #900;}
+.support .faq_list .answer {padding: 2.4rem; color: #ccc; border: 1px solid #444; border-top: none; background: #000; display: none;}
+.support .faq_list .answer > div {padding: 1.2rem 3rem; word-wrap: break-word;}
+.support .faq_list .on .quest {color: #000; background: #fc0;}
+.support .faq_list .on .quest > p {border-color: #fe0;}
+.support .faq_list .on .quest > p:first-child {color: #000; border: 1px solid #ff6; background: #fd0;}
+.support .faq_list .on .bul_quest {color: #fff; border: 1px solid #c00; background-color: #c00;}
+.support .faq_list .nodata {min-height: 33.8rem; padding-top: 15rem; color: #f33; text-align: center; border: 1px solid #a00; background: rgba(120, 0, 0, 0.4);}
+
+.support .paging {margin-top: 3rem; font-size: 0; letter-spacing: -4rem;}
+.support .paging a {min-width: 3.6rem; min-height: 3.6rem; padding: 1.1rem 1.2rem 1.1rem; letter-spacing: 0; display: inline-block;}
+.support .paging a.first {background: url(/images/event/2019/06_transfer/paging_first.png) no-repeat 50%;}
+.support .paging a.prev {background: url(/images/event/2019/06_transfer/paging_prev.png) no-repeat 50%;}
+.support .paging a.next {background: url(/images/event/2019/06_transfer/paging_next.png) no-repeat 50%;}
+.support .paging a.last {background: url(/images/event/2019/06_transfer/paging_last.png) no-repeat 50%;}
+.support .paging a:hover {background-color: #000;}
+.support .paging ul {margin: 0 1.2rem;}
+.support .paging ul > li.current {min-width: 3.6rem; min-height: 3.6rem; padding: 1.1rem 1.2rem 1.1rem; font-size: 1.6rem; color: #fd0; text-decoration: underline;}
+.support .paging ul > li > a {font-size: 1.6rem; color: #999; text-indent: 0;}
+.support .paging ul > li > a:hover {color: #f00; background: #000;}
+.support .paging a, .support .paging ul, .support .paging ul > li {vertical-align: top; display: inline-block;}
+
+.support .qna {padding: 8.4rem 0; font-size: 1.6rem; border: 1px solid #a00; border-radius: 0.4rem; background: rgba(120, 0, 0, 0.4); box-shadow: 0 2rem 3rem rgba(0, 0, 0, 0.3);}
+.support .qna > h3 {font-size: 3.6rem; color: #fd0;}
+.support .qna .txt {margin-top: 0.6rem; color: #fff; line-height: 2.4rem;}
+.support .qna .btn_email {margin-top: 3.6rem; padding: 2.4rem 3.6rem; color: #f99; border-radius: 0.4rem; border: 1px solid #e00; background: url(/images/event/2019/06_transfer/btn_line_rdl.png) no-repeat left 50%, url(/images/event/2019/06_transfer/btn_line_rdr.png) no-repeat right 50%; background-color: #800; display: inline-block;}
+.support .qna .btn_email:hover {color: #e00; background-color: #000;}
+
+/* SIGNUP */
+.signup {padding: 6rem 0 8.4rem; background: #400 url(/images/signup_bg.jpg) no-repeat 50% top;}
+.signup > h1 {margin-bottom: 6rem; text-align: center;}
+
+.signup .contents {max-width: 120rem; margin: 0 auto; padding: 0 2.4rem;}
+.signup .contents .cont {width: 100%; padding: 4.8rem; font-size: 1.4rem; border: 1px solid #fc5600; background: rgba(252, 86, 0, 0.43); box-shadow: 0 2rem 3rem rgba(0, 0, 0, 0.3);}
+.signup .contents .cont_bot {margin-top: 6rem;}
+
+.signup .facebook {margin-bottom: 4rem; text-align: center;}
+.signup .facebook > p > a {width: 100%; height: 6rem; font-size: 2rem; color: #c1d9ff; letter-spacing: -0.02rem; line-height: 6.4rem; font-family: 'Teko', sans-serif; border: 1px solid #5c8ad3; background: #4269af; border-radius: 4px; display: inline-block;}
+.signup .facebook > p > a img {margin: -4px 12px 0 0; width: 2rem; vertical-align: middle;}
+.signup .facebook > p > a:hover {color: #fff; border: 1px solid #7099da; background: #537cbd;}
+.signup .facebook .division {height: 1.4rem; margin-top: 3rem; font-size: 1.8rem; color: #f00; line-height: 1.8rem; font-family: 'Teko', sans-serif; position: relative;}
+.signup .facebook .division:before {width: calc(50% - 2.2rem); height: 1px; background: #c00; content: ""; display: block; position: absolute; top: 50%; left: 0;}
+.signup .facebook .division:after {width: calc(50% - 2rem); height: 1px; background: #c00; content: ""; display: block; position: absolute; top: 50%; right: 0;}
+.signup .facebook .check {text-align: left;}
+
+.signup .cont_com {width: 100%; min-height: 40rem; font-size: 0; letter-spacing: -0.4rem; text-align: center; border: 2px solid #fc0; background: url(/images/event/2019/06_transfer/com_bg.png) repeat-x left top; display: table;}
+.signup .cont_com > div {width: 50%; display: table-cell; vertical-align: middle;}
+.signup .cont_com .com_img {background: url(/images/event/2019/06_transfer/com_bg_img.png) no-repeat 50% top;}
+.signup .cont_com .com_txt {font-size: 1.6rem; color: #fff; line-height: 2.4rem; letter-spacing: 0.01rem; background: url(/images/event/2019/06_transfer/btn_clamp_yltl.png) no-repeat left top, url(/images/event/2019/06_transfer/btn_clamp_yltr.png) no-repeat right top, url(/images/event/2019/06_transfer/btn_clamp_ylbl.png) no-repeat left bottom, url(/images/event/2019/06_transfer/btn_clamp_ylbr.png) no-repeat right bottom; background-color: #751;}
+.signup .cont_com .com_txt > h2 {margin-bottom: 2rem; padding-bottom: 3.6rem; font-size: 4.8rem; color: #fe0; letter-spacing: 0.04rem; background: url(/images/event/2019/06_transfer/tit_bar_yll.png) no-repeat 50% bottom; display: inline-block;}
+
+/* POLICY */
+.policy .title > h2 {margin-top: -0.4rem; font-size: 2.6rem; color: #fd0; letter-spacing: 0.06rem;}
+.policy .policy_txt {margin-top: 2.4rem; color: #fbb; line-height: 2.4rem;}
+.policy > ul {width: 100%;}
+.policy > ul > li {margin-top: 2rem; color: #fbb; line-height: 2.4rem;}
+.policy > ul > li > h3 {margin: 1.4rem 0 0.4rem; font-size: 2rem; color: #fff; letter-spacing: 0.04rem;}
+.policy > ul > li > span {color: #fff;}
+.policy > ul > li > span > strong {color: #fff; font-weight: 400;}
+.policy > ul > li > a {color: #fbb; text-decoration: underline;}
+.policy > ul > li > a:hover {color: #fd0;}
+.policy .list {width: 100%; margin: 3rem 0; padding: 2rem 2.4rem 2rem 2.2rem; border: 1px solid #a00; border-radius: 0.3rem; background: #800;}
+.policy .list > li {padding-left: 2.8rem; color: #fbb; position: relative;}
+.policy .list > li > span {width: 1.8rem; height: 1.8rem; font-size: 1.1rem; color: #fbb; line-height: 1.9rem; font-weight: 500; text-align: center; text-transform: uppercase; border-radius: 50%; background: #d00; position: absolute; top: 0.3rem; left: 0;}
+.policy .last_txt {margin-top: 2.4rem; color: #fbb;}
+.policy .date {padding-top: 3.6rem; font-size: 1.1rem; color: #f66; letter-spacing: 0.02rem; font-weight: 500; text-transform: uppercase;}
+
+/* LAYER */
+.dimmed {width: 100%; height: 100%; background: url(/images/event/2019/06_transfer/dim_bk40.png) repeat; position: fixed; left: 0; top: 0; z-index: 90;}
+.dim_block {width: 100%; height: 100%; text-indent: -99999px; background: none; position: fixed; left: 0; top: 0; z-index: 90;}
+.empty {width: 100%; height: 100%;}
+.empty .loding {min-height: 48rem; background: url(/images/event/2019/06_transfer/loading_gy.gif) no-repeat 50%; display: block;}
+
+/* POPUP */
+.pop_layout {width: 100%; background: #800;}
+.pop_layout > h2 {min-height: 5.9rem; padding: 2.5rem 2.4rem 2rem; font-size: 2.5rem; color: #fd0; letter-spacing: 0.06rem; text-align: center; border-bottom: 1px solid #c00; background: #600;}
+.pop_layout > h2 > font {color: #fff;}
+.pop_layout .btn_close {padding: 3.5rem 3.4rem; font-size: 0; border: 1px solid #c00; background: #400 url(/images/event/2019/06_transfer/btn_close.png) no-repeat 50%; display: inline-block; position: absolute; top: -0.1rem; right: -0.1rem;}
+.pop_layout .btn_close:hover {border: 1px solid #fd0; background-color: #000;}
+.pop_layout .pop_cont {margin: 2.4rem; padding: 2.4rem; background: url(/images/event/2019/06_transfer/btn_clamp_rdtl.png) no-repeat left top, url(/images/event/2019/06_transfer/btn_clamp_rdtr.png) no-repeat right top, url(/images/event/2019/06_transfer/btn_clamp_rdbr.png) no-repeat right bottom, url(/images/event/2019/06_transfer/btn_clamp_rdbl.png) no-repeat left bottom;}
+.pop_layout .pop_bot {padding: 2.7rem 2.4rem 2.4rem; font-size: 1.2rem; color: #f66; line-height: 1.4rem; letter-spacing: -0.04rem; font-weight: 500; text-align: center; background: #600;}
+.pop_layout .pop_bot > a {color: #f66; text-decoration: underline;}
+.pop_layout .pop_bot > a:hover {color: #fd0;}
+.pop_layout .pop_bot .btn_signup {min-width: 12rem; height: 3.6rem; margin-bottom: 1rem; padding: 0 1.8rem; font-size: 1.7rem; color: #fff; line-height: 3.8rem; letter-spacing: 0.06rem; font-weight: 500; border: 1px solid #c00; border-radius: 0.4rem; background: #900;}
+.pop_layout .pop_bot .btn_signup:hover {color: #fd0; border: 1px solid #e00; background-color: #000;}
+
+.pop_btn {margin: 3rem 0 0.6rem;}
+.pop_btn .btn > li {width: 35%;}
+
+.popup {width: 100%; height: 100%;}
+.popup .pop_layout > h2 {padding: 1.9rem 2.8rem 1.4rem;}
+.popup .pop_layout .btn_close {padding: 2.9rem 2.8rem;}
+.popup .pop_layout .btn_close:hover {border: 1px solid #c00;}
+
+.layerpop {width: 100%; height: 100%; position: fixed; top: 0; left: 0; z-index: 99; display: none;}
+.layerpop .dimmed {width: 100%; height: 100%; background: url(/images/event/2019/06_transfer/bk60.png) repeat; position: fixed; left: 0; top: 0; z-index: 90;}
+.layerpop .pop_layout {border: 1px solid #c00; box-shadow: 0 2rem 8.4rem rgba(0, 0, 0, 0.6); position: absolute; top: 50%; left: 50%; z-index: 99;}
+.layerpop .pop_iframe {width: 60rem; margin-left: -30rem; position: absolute; top: 50%; left: 50%; z-index: 99;}
+.layerpop .pop_iframe > iframe {width: 100%; border: 1px solid #c00; display: block;}
+
+.pop_login .pop_iframe {margin-top: -25rem;}
+.pop_login .pop_cont {margin: 0.6rem;}
+.pop_login .entry > h5 {margin-top: 2.4rem; color: #fd0;}
+.pop_login .entry > h5:first-child {margin-top: 0;}
+.pop_login .entry > input {border: 1px solid #a00; line-height: 1.6rem;}
+.pop_login .entry > input:focus {border: 1px solid #c00;}
+
+.pop_howto {position: absolute;}
+.pop_howto .pop_wide {width: 90%; max-width: 120rem; margin: 14.4rem auto 0; position: relative; z-index: 99;}
+.pop_howto .pop_cont {padding: 2.4rem; font-size: 1.4rem; line-height: 2.4rem; text-align: center; border: 1px solid #c00; background: #800;}
+.pop_howto .howto {padding: 2.4rem; background: url(/images/event/2019/06_transfer/btn_clamp_rdtl.png) no-repeat left top, url(/images/event/2019/06_transfer/btn_clamp_rdtr.png) no-repeat right top, url(/images/event/2019/06_transfer/btn_clamp_rdbr.png) no-repeat right bottom, url(/images/event/2019/06_transfer/btn_clamp_rdbl.png) no-repeat left bottom;}
+.pop_howto .howto .intro {margin-bottom: 3.6rem; color: #fff;}
+.pop_howto .howto .intro > a {color: #faa; text-decoration: underline;}
+.pop_howto .howto .intro > a:hover {color: #fd0;}
+.pop_howto .howto .intro > button {margin-top: 1.6rem;}
+.pop_howto .howto .period .date {padding: 1.8rem 2.4rem 1.6rem; color: #fff; letter-spacing: 0.01rem; border: 1px solid #e00; border-radius: 0.4rem 0.4rem 0 0; background: #c00;}
+.pop_howto .howto .period .date > font {color: #ff0;}
+.pop_howto .howto .period .txt {margin-bottom: 3rem; padding: 2.4rem 2.4rem 2.2rem; color: #faa; border: 1px solid #a00; border-top: none; border-radius: 0 0 0.4rem 0.4rem; background: #900;}
+.pop_howto .howto .flow {width: 100%;}
+.pop_howto .howto .flow > li {width: 50%; margin-top: 1.2rem; padding-left: 0.6rem; text-align: center; display: inline-block; position: relative;}
+.pop_howto .howto .flow > li:nth-child(odd) {padding-left: 0; padding-right: 0.6rem;}
+.pop_howto .howto .flow .step {padding: 3rem 3.6rem 2.4rem; color: #fff; border-radius: 0.4rem; background: #600; position: relative;}
+.pop_howto .howto .flow .step_num {padding: 1.2rem 2rem; font-size: 1.4rem; color: #000; line-heignt: 1.6rem; border: 1px solid #fd0; border-radius: 0.4rem; background: #fc0; display: inline-block; position: absolute; top: 0; left: 0;}
+.pop_howto .howto .flow .step_img > img {border: 1px solid #a00; box-shadow: 0 1.2rem 2rem rgba(0, 0, 0, 0.3);}
+.pop_howto .howto .flow .step_txt {margin-top: 2rem;}
+.pop_howto .howto .attention {margin-top: 4.8rem;}
+.pop_howto .howto .attention > li {color: #f88; line-height: 2.2rem;}
+.pop_howto .howto .attention > li > a {color: #f88; text-decoration: underline;}
+.pop_howto .howto .attention > li > a:hover {color: #fd0;}
+.pop_howto .pop_btn {margin-top: 4.8rem;}
+.pop_howto .pop_btn .btn > li {max-width: 18rem;}
+
+.pop_partial .pop_layout {width: 72rem; margin: -23.4rem 0 0 -36rem;}
+.pop_partial .down {width: 100%;}
+.pop_partial .down > li {width: 50%; margin-top: 1.2rem; padding-left: 1.2rem; display: inline-block;}
+.pop_partial .down > li:first-child {margin-top: 0;}
+.pop_partial .down > li:nth-child(2) {margin-top: 0;}
+.pop_partial .down > li:nth-child(odd) {padding-left: 0; padding-right: 1.2rem;}
+.pop_partial .down > li > p {width: 100%; border-radius: 0.4rem; overflow: hidden;}
+.pop_partial .down a {width: 100%; padding: 2.5rem 2.4rem 2.3rem 10.8rem; font-size: 1.6rem; color: #fff; letter-spacing: 0.06rem; border: 1px solid #e00; background: #c00; display: inline-block; position: relative;}
+.pop_partial .down a > span {max-width: 6.6rem; padding: 3.2rem 3rem; font-size: 0; border: 1px solid #fc0; background: url(/images/event/2019/06_transfer/icon_down.png) no-repeat 50%, url(/images/event/2019/06_transfer/btn_line_yll.png) no-repeat left 50%, url(/images/event/2019/06_transfer/btn_line_ylr.png) no-repeat right 50%; background-color: #fa0; display: inline-block; position: absolute; top: -0.1rem; left: -0.1rem;}
+.pop_partial .down a > font {height: 1.6rem; margin-right: 1.2rem; padding-right: 1.6rem; color: #faa; line-height: 1.6rem; text-transform: uppercase; border-right: 1px solid #f88; display: inline-block;}
+.pop_partial .down a:hover {color: #000; border: 1px solid #ff0; background: #fc0;}
+.pop_partial .down a:hover > font {color: #c00; border-right: 1px solid #c00;}
+
+/**************** W1720 ****************/
+@media screen and (max-width: 1720px) {
+
+	/* EVENT */
+	.event .banner {display: none;}
+}
+
+/**************** W1478 ****************/
+@media screen and (max-width: 1478px) {
+	
+	/* TRANSFER */
+	.transfer .transfer_step .frame {padding: 0 6rem;}
+	
+	/* DOWNLOAD */
+	.download {padding: 1.2rem 3rem 1.1rem;}
+	
+	/* SUPPORT */
+	.support {padding: 14.4rem 4.2rem 12rem;}
+}
+
+/**************** W1360 ****************/
+@media screen and (max-width: 1360px) {
+	
+	/* TRANSFER */
+	.transfer .transfer_step .frame {padding: 0 5rem;}
+	
+	/* EVENT */
+	.event .cont .img_left {width: 48rem; top: 0.8rem; left: -15.2rem;}
+	.event .cont .img_right {width: 30rem; top: 2.6rem; right: 1rem;}
+}
+
+/**************** W1200 ****************/
+@media screen and (max-width: 1200px) {
+	
+	/* TRANSFER */
+	.transfer {padding: 13.2rem 0 12rem;}
+	.transfer > h1 {margin-bottom: 4rem;}
+	.transfer > h1 img {width: 62rem;}
+	
+	.transfer .transfer_step .frame {padding: 0 4.8rem;}
+	.transfer .transfer_step .frame .txt {margin-top: 1.4rem;}
+	.transfer .transfer_step .frame button {margin: 2.2rem 0 0.2rem;}
+	
+	.transfer .visual_img {display: none;}
+	
+	/* EVENT */
+	.event .cont {padding: 5.2rem 2.4rem;}
+	.event .event_cont > h2 {font-size: 4rem;}
+	.event .event_cont > h3 {margin-top: 0.8rem; font-size: 2.8rem;}
+	.event .cont .img_left {width: 40rem; top: 1.8rem; left: -14.2rem;}
+	.event .cont .img_right {width: 24rem; top: 4rem; right: 0.6rem;}
+	
+	/* SUPPORT */
+	.support {padding: 12rem 4.2rem 9.6rem;}
+	
+	.support .tab {margin-bottom: 4.8rem;}
+	.support .tab > li > a {height: 6rem; font-size: 2.4rem; line-height: 6.4rem; letter-spacing: 0.08rem;}
+	.support .tab > li > a > font {padding: 0 0.1rem 0 0.2rem;}
+	.support .faq_list li {font-size: 1.5rem; line-height: 2.2rem;}
+	.support .faq_list .quest > p {padding: 1.6rem 2.2rem 1.4rem;}
+	.support .faq_list .quest > p:first-child {width: 5.6rem; padding: 1.6rem 0 1.4rem;}
+	.support .faq_list .answer {padding: 2.2rem;}
+	.support .faq_list .answer > div {padding: 1rem 2.4rem;}
+	.support .faq_list .nodata {min-height: 29.8rem; padding-top: 14rem;}
+	
+	/* POPUP */
+	.pop_howto .pop_wide {margin: 12rem auto 0;}
+}
+
+/**************** W1080 ****************/
+@media screen and (max-width: 1080px) {
+	
+	/* EVENT */
+	.event .cont > img {display: none;}
+	.event_banner .cont > img {display: none;}
+	.event_banner .cont .img_left {top: 3.2rem; left: -9.8rem;}
+	.event_banner .cont .img_right {top: 3.2rem; right: -1.4rem;}
+}
+
+/**************** W1000 ****************/
+@media screen and (max-width: 1000px) {
+	
+	/* TRANSFER */
+	.transfer {padding: 12.6rem 0 9rem; background-size: 180rem;}
+	
+	.transfer .transfer_step .frame {padding: 0 3.6rem;}
+	.transfer .transfer_step .on .frame .arrow {display: none;}
+	
+	/* SUPPORT */
+	.support {padding: 9.6rem 4.2rem 7.2rem;}
+	.support .qna {padding: 7.2rem 0;}
+	.support .qna .txt {margin-top: 0.2rem;}
+	.support .qna .btn_email {margin-top: 2.4rem;}
+}
+
+/**************** W920 ****************/
+@media screen and (max-width: 920px) {
+	
+	/* LAYOUT */
+	header {padding: 2.4rem;}
+	header .social {top: 1.8rem; left: 1.8rem;}
+	
+	/* TRANSFER */
+	.transfer {padding: 12rem 0 8.4rem; background-size: 160rem;}
+	.transfer > h1 img {width: 58rem;}
+	.transfer .transfer_step .frame {padding: 0 2.4rem;}
+	
+	/* SIGNUP */
+	.signup .cont_com .com_img {width: 45%; background-position: 60% top;}
+	.signup .cont_com .com_txt {width: 55%;}
+	
+	/* SUPPORT */
+	.support {padding: 8.4rem 4.2rem 6rem;}
+	
+	/* POPUP */
+	.pop_howto .pop_wide {margin: 9.6rem auto 0;}
+}
+
+/**************** W840 ****************/
+@media screen and (max-width: 840px) {
+	
+	/* TRANSFER */
+	.transfer > h1 img {width: 80%;}
+	
+	.transfer .transfer_step li {width: 100%;}
+	.transfer .transfer_step li:first-child {width: 100%;}
+	.transfer .transfer_step li > div {background-size: cover;}
+	.transfer .transfer_step .frame {height: 20rem; padding: 0 3.6rem; background: none;}
+	.transfer .transfer_step .frame .bul {display: none;}
+	.transfer .transfer_step .frame .txt {margin-top: 0;}
+	.transfer .transfer_step .frame button {margin-top: 1.8rem;}
+	
+	.transfer .transfer_step .on {margin-bottom: 2rem;}
+	.transfer .transfer_step .on:last-child {margin-bottom: 0;}
+	.transfer .transfer_step .on > div {background-size: cover;}
+	.transfer .transfer_step .on .frame h2 {font-size: 2.8rem;}
+	.transfer .transfer_step .on .frame .arrow {width: 3.8rem; height: 2rem; margin-top: 10.4rem; margin-left: -1.9rem; background: url(/images/event/2019/06_transfer/step_arrow_ver.png) no-repeat 50%; left: 50%; bottom: 0; display: block;}
+	.transfer .transfer_step .on .frame .txt {min-height: auto;}
+	.transfer .transfer_step .on .frame {height: 20rem;}
+	.transfer .transfer_step .on .frame .txt {margin-top: 0;}
+	
+	.event_banner .cont > img {display: none;}	
+}
+
+/**************** W768 ****************/
+@media screen and (max-width: 768px) {
+	
+	html {width: 100%; font-size: 56%;}
+	footer {padding: 4.8rem 0 3.6rem;}
+	footer > img {width: 30%; max-width: 162px;}
+	footer .copy {margin-top: 1.2rem;}
+	
+	/* LAYOUT */
+	header {margin-top: 6.4rem; padding: 1.4rem;}
+	header .social {top: 1rem; left: 1rem;}
+	header .social > a {width: 4rem; height: 4rem; margin-left: 0.4rem;}
+	header .social .sns_discord {background-size: cover;}
+	header .social .sns_facebook {background-size: cover;}
+	header .social .sns_youtube {background-size: cover;}
+	header .social .sns_instagram {background-size: cover;}
+	header .utilbtn > button {width: 6.8rem; height: 3.4rem; font-size: 1.6rem; letter-spacing: 0.06rem; line-height: 3.6rem;}
+	header .utilbtn > button:first-child {margin-right: 0.8rem;}
+
+	/* FORM */
+	.entry .check {letter-spacing: -0.02rem;}
+	.entry .with_btn > input {padding-right: 9.6rem;}
+	.entry .with_btn > button {width: 7.2rem;}
+
+	.capcha {margin-top: 2.4rem;}
+	.capcha > div {width: 100%;}
+	
+	/* INPUT */
+	.btn84 {min-width: 100%; height: 6rem; padding: 0.1rem 2.4rem 0 2.6rem; font-size: 2rem; line-height: 6.2rem; letter-spacing: 0.2rem;}
+	.btn > li {width: 40%;}
+	
+	/* SHARE ON FACEBOOK */
+	.sharefb_m {display: block; position: relative; z-index: 30;}
+	.sharefb_m .btn_share {height: 6rem;}
+	
+	/* TRANSFER */
+	.transfer {padding: 9.6rem 0 4.8rem; background-size: 130rem;}
+	.transfer .contents .cont {padding: 0 1.6rem;}
+	.transfer .visual {padding-bottom: 4.8rem;}
+	.transfer .visual .txt {width: 100%; line-height: 2.2rem;}
+	.transfer .visual .btn {margin-top: 2.4rem;}
+	.transfer .visual .btn > button {margin-top: 0; line-height: 2rem;}
+	.transfer .visual .btn .btn_share {display: none;}
+	.transfer .transfer_step li {margin-top: 1.2rem; padding: 0;}
+	.transfer .transfer_step li:first-child {margin-top: 0;}
+	.transfer .transfer_step .frame {padding: 0 1.8rem;}
+	.transfer .transfer_step .frame .txt {margin-top: 1rem; line-height: 2rem;}
+	.transfer .transfer_step .on {margin-bottom: 1.8rem; padding: 0;}
+	.transfer .transfer_step .on .frame {padding: 0 1.2rem;}
+	.transfer .transfer_step .on .frame .txt {margin-top: 1rem; line-height: 2.4rem;}
+	
+	.garena {margin: 6rem auto 0; padding: 1.2rem;}
+	.garena .info {padding: 3rem 1.8rem 3.6rem;}
+	.garena .info .txt {margin-bottom: 2.4rem;}
+	.garena .cont_btn .btn > li {width: auto;}
+	.garena .cont_btn .btn84 {min-width: 15.2rem; padding-right: 2.8rem;}
+		
+	/* EVENT */
+	.event .event_cont > h2 {font-size: 3rem; line-height: 3rem;}
+	.event .event_cont > h2 > font {display: block;}
+	.event .event_cont > h3 {margin-top: 0.8rem; font-size: 2.2rem; line-height: 2.4rem;}
+	.event .event_cont .event_txt {line-height: 2.2rem;}
+	
+	.event_banner {padding: 0 1.6rem;}
+	.event_banner .event_cont > h2 {font-size: 2.8rem; line-height: 3rem;}
+	.event_banner .event_cont > h3 {margin-top: 0.8rem; font-size: 1.4rem; line-height: 2rem;}
+	
+	.betatest > a {width: 9.2rem; height: 8rem; background-size: cover;}
+	.betatest > a > img {width: 9.2rem; height: 8rem;}
+		
+	/* DOWNLOAD */
+	.download {display: none;}
+	
+	/* SUPPORT */
+	.support {padding: 4.8rem 1.4rem 3.6rem;}
+	.support .tab {margin-bottom: 2.4rem;}
+	.support .qna {padding: 6rem 3.6rem;}
+	
+	.support .faq_list .answer {padding: 0.6rem;}
+	.support .faq_list .answer > div {padding: 1.8rem;}
+	
+	.support .paging {margin-top: 2rem;}
+	
+	/* POPUP */
+	.layerpop .pop_iframe {width: 90%; margin-left: -45%; position: absolute; top: 50%; left: 50%; z-index: 99;}
+	
+	.pop_login .pop_cont {padding: 1.8rem; background: none;}
+	.pop_login .pop_layout > h2 {padding-right: 6rem;}
+	.pop_login .pop_layout > h2 > font {font-size: 0;}
+	.pop_login .entry > h5 {margin-top: 1.8rem;}
+	.pop_login .pop_btn .btn > li {margin: 0;}
+	
+	.pop_howto .pop_wide {margin: 7.2rem auto 0;}
+	.pop_howto .pop_cont {padding: 0.6rem; line-height: 2.2rem;}
+	.pop_howto .howto {padding: 2rem 1.2rem;}
+	.pop_howto .howto .period .date {padding: 1.2rem;}
+	.pop_howto .howto .period .txt {margin-bottom: 2.4rem; padding: 1.2rem;}
+	.pop_howto .howto .flow > li {width: 100%; padding-left: 0;}
+	.pop_howto .howto .flow > li:nth-child(odd) {padding: 0;}
+	.pop_howto .howto .flow .step_num {padding: 0.6rem 1.2rem;}
+	.pop_howto .howto .attention {margin-top: 2.4rem;}
+	
+	.pop_btn .btn > li {width: 100%;}
+	
+	/* SIGNUP */
+	.signup > h1 {margin-bottom: 3.6rem; padding: 3.6rem 0;}
+	.signup > h1 img {width: 60%; max-width: 318px;}
+
+	.signup .contents {padding: 0 1.2rem;}
+	.signup .contents .cont {padding: 2.4rem 2rem;}
+	.signup .contents .cont_bot {margin-top: 3.6rem;}
+	
+	.signup .cont_com {min-height: auto;}
+	.signup .cont_com > div {display: block;}
+	.signup .cont_com .com_img {width: 100%; min-height: 36vw; background-position: 50% top; background-size: 60vw;}
+	.signup .cont_com .com_txt {width: 100%; padding: 10.8vw 2.4rem 8.4vw; font-size: 3vw; line-height: 4.4vw;}
+	.signup .cont_com .com_txt > h2 {margin-bottom: 2.4vw; padding-bottom: 5.2vw; font-size: 7.2vw;}
+	
+	.signup .contents .cont_bot .btn > li {width: auto;}
+	
+	/* POLICY */
+	.policy .title > h2 {margin-top: 0.2rem; padding-bottom: 2rem; font-size: 2rem;}
+	.policy > ul > li:first-child {margin-top: 3rem;}
+	.policy .list {padding: 1.6rem; line-height: 2.2rem;}
+	.policy .list > li {font-size: 1.3rem;}
+}
+
+/**************** W480 ****************/
+@media screen and (max-width: 480px) {
+
+	.pop_login .pop_cont {padding: 1.4rem;}
+	.pop_login .entry > h5 {margin-top: 1.4rem;}
+	.pop_login .entry > input {height: 5.4rem; padding: 1.8rem 2.4rem;}
+	.pop_login .pop_btn {margin: 1.8rem 0 0.2rem;}
+	.pop_login .pop_btn .btn > li .btn60 {height: 5.2rem; line-height: 5.4rem;}
+	
+	}
